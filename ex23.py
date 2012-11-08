@@ -1,0 +1,1 @@
+﻿Esse exercício é para tentar entender um outro projeto em python
