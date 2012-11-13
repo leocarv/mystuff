@@ -5,7 +5,7 @@ from random import randint
 class Game(object):
 
     def __init__(self, start):
-        self.quips = [
+        self.quips = [                          #mensagens de game over
             "You died.  You kinda suck at this.",
             "Your mom would be proud. If she were smarter.",
             "Such a luser.",
@@ -17,9 +17,9 @@ class Game(object):
         next_room_name = self.start
         
         while True:
-            print "\n--------"
-            room = getattr(self, next_room_name)
-            next_room_name = room()
+            print "\n--------"                   #printa uma quebra de linha
+            room = getattr(self, next_room_name) #recupera a referencia para o metodo que representa a proxima sala
+            next_room_name = room()              #executa o metodo! e guarda qual será a próxima sala.
          
          
     def death(self):
