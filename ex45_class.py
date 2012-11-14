@@ -45,8 +45,8 @@ class Game(object):
         elif action == "2":
             print "Escolheu 2"
             return {"sala": "acerte_numero",
-                    "max": "100",
-                    "tentativas": "7",
+                    "max": 100,
+                    "tentativas": 7,
                     "sala_acerto": "sala_final"}
         elif action == "3":
             print "Escolheu 3"
@@ -65,8 +65,8 @@ class Game(object):
         elif action == "2":
             print "Escolheu 2"
             return {"sala": "acerte_numero",
-                    "max": "500",
-                    "tentativas": "12",
+                    "max": 500,
+                    "tentativas": 12,
                     "sala_acerto": "sala_final"}
         elif action == "3":
             print "Escolheu 3"
@@ -75,8 +75,8 @@ class Game(object):
             return {"sala": "corredor_esquerda"}
     
     def acerte_numero(self, parametros):
-        numero = randint(1, int(parametros['max']))
-        total_tentativas = int(parametros['tentativas'])
+        numero = randint(1, parametros['max'])
+        total_tentativas = parametros['tentativas']
         tentativas = 0
         escolha = 0
         while (escolha != numero) and (total_tentativas > tentativas):
